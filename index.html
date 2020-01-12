@@ -1,0 +1,938 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <section><h1>Robert Szczygielski</h1></section>
+            <section>
+                <h1>
+				<pre><code class="center" data-trim data-line-numbers="">
+					Very basic
+					informations
+					about Java
+				</code></pre>
+                </h1>
+            </section>
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li>Common features of programing languages</li>
+                    <li>OOP – Object oriented programing</li>
+                    <li>Java features</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section><h2>Common features of programing languages</h2></section>
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li>Types</li>
+                    <li>Tables</li>
+                    <li>Comparison Operators</li>
+                    <li>Assignment Operators</li>
+                    <li>Logical Operators</li>
+                    <li>Conditional statements</li>
+                    <li>Loops</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section><h1>Types</h1></section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_1.jpg">
+            </section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_2.jpg">
+            </section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_3.jpg">
+            </section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_4.jpg">
+            </section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_5.jpg">
+            </section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_min_max.png">
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					byte byteValue;
+
+					int integerValue;
+
+					boolean booleanValue;
+
+					float floatValue;
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					byte myNameForValue;
+
+					myNameForValue = 120;
+
+					myNameForValue = 88;
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					byte byteValue = 10;
+
+					int integerValue = 1000;
+
+					boolean booleanValue = true;
+
+					float floatValue = 2.3f;
+				</code></pre>
+                <pre class="fragment"><code style="color: red" class="hljs" data-trim data-line-numbers="">
+					float incorrectFloatValue = 2.3;
+				</code></pre>
+            </section>
+            <section>
+                <img width="80%" height="80%" data-src="img/Types_declaration_4.png">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Arrays</h1>
+                <img class="fragment" width="50%" height="50%" data-src="img/Arrays_2c.jpg">
+            </section>
+            <section>
+                <p>Start from <span style="color:red">0</span></p>
+                <p>Initialized by <span style="color:red">[]</span></p>
+            </section>
+            <section>
+				  <pre><code class="hljs" data-trim data-line-numbers="">
+					  int[] intArray;
+
+					  intArray = new int[10];
+				  </code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					int[] intArray = new int[10];
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					  intArray[0] = 23;
+
+					  intArray[8] = 3;
+				  </code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					valueFromIndex0 = intArray[0]
+
+					valueFromIndex3 = intArray[3]
+				</code></pre>
+            </section>
+            <section>
+                <img width="40%" height="40%" data-src="img/Arrays_3c.jpg">
+                <img class="fragment" width="50%" height="50%" data-src="img/Arrays_3d.jpg">
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					int[][] array2D = new int[10][5];
+
+					array2D[3][1] = 6;
+
+					valueFrom2DArray = array2D[3][2];
+				</code></pre>
+                <img class="fragment" width="50%" height="50%" data-src="img/Arrays_4b.jpg">
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					int[][][] array2D = new int[10][5][20];
+
+					array2D[3][1][10] = 6;
+
+					valueFrom2DArray = array2D[3][2][18];
+				</code></pre>
+                <img class="fragment" width="50%" height="50%" data-src="img/Arrays_5b.png">
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Comparison Operators</h1>
+                <pre class="fragment"><code data-trim data-line-numbers="">
+					== 'equal to'
+					!= 'not equal to'
+					> 'greater then'
+					>= 'greater then or equals to'
+					< 'less then'
+					<= 'less then or equals to'
+				</code></pre>
+            </section>
+            <section>
+				<pre><code data-trim data-line-numbers="">
+					val1 == val2
+
+					val1 != val2
+
+					val1 > val2
+
+					val1 >= val2
+
+					val1 < val2
+
+					val1 <= val2
+				</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Assignment Operators</h1>
+                <pre><code data-trim data-line-numbers="">
+					+=
+					-=
+					*=
+					/=
+					%=
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">+=</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a += 2;
+					a = a + 2;
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">-=</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a -= 2;
+					a = a - 2;
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">*=</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a *= 2;
+					a = a * 2;
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">/=</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a /= 2;
+					a = a / 2;
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">%=</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a %= 2;
+					a = a % 2;
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">++</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a++;
+					a = a + 1;
+				</code></pre>
+            </section>
+            <section>
+                <h3><span style="color: #17ff2e">--</span></h3>
+                <pre><code data-trim data-line-numbers="">
+					a--;
+					a = a - 1;
+				</code></pre>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>Logical Operators</h3>
+                <pre><code class="hljs" data-trim data-line-numbers="1,3,5">
+					&& and
+
+					|| or
+
+					! not
+				</code></pre>
+                <p class="fragment">Buy 1 bread <span style="color: red">or</span> 6 buns <span style="color: red">
+					and</span> 2 milks, do <span style="color: red">not</span> buy butter</p>
+                <p class="fragment">Buy 1 bread <span style="color: red">||</span> 6 buns <span
+                        style="color: red">&&</span> 2 milks, do <span style="color: red">!</span> buy butter</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Conditional statements</h1>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					if (somethingIsTrue) {
+						doThis
+					}
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="4,6">
+					int a = 3;
+					int b = 5;
+
+					if (a != b) {
+						showMessage("Not Equals")
+					}
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="4,6">
+					int a = 3;
+					int b = 5;
+
+					if (a == b) {
+						showMessage("Equals")
+					}
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="4,6,8">
+					int a = 3;
+					int b = 5;
+
+					if (a != b) {
+						showMessage("Not Equals");
+					} else {
+						showMessage("Equals");
+					}
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					if (isRaining()) {
+						takeUmbrella();
+					} else {
+						takeSunGlasses();
+					}
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="6">
+					int a = 3;
+					int b = 5;
+
+					if (a > b) {
+						showMessage("a is greatest");
+					} else if (a < b){
+						showMessage("b is greatest");
+					} else {
+						showMessage("a and b are equals");
+					}
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="">
+					int a = 3;
+					switch (a) {
+						case 1:
+							showMessage("it is one");
+							break;
+						case 2:
+							showMessage("it is two");
+							break;
+						case 3:
+							showMessage("it is three");
+							break;
+						default:
+							showMessage("do not know");
+					}
+				</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Loops</h1>
+                <ul>
+                    <li>for</li>
+                    <li>while</li>
+                    <li>do-while</li>
+                </ul>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="1,3">
+					for (startNumber; endCondition; step) {
+						doThis
+					}
+				</code></pre>
+
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="1,3">
+					for (int i=0; i<100; i++) {
+						showMessage("print 99 times");
+					}
+				</code></pre>
+            </section>
+            <section>
+				<pre><code class="hljs" data-trim data-line-numbers="1,3,4">
+					while (endCondition) {
+						doThis
+						STEP - Must be in body
+					}
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					int i = 0;
+					while (i < 100) {
+						showMessage("print 34 times");
+						i += 3;
+					}
+				</code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="1,3,4">
+					do {
+						doThis
+						STEP - Must be in body
+					} while (endCondition);
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					int i = 0;
+					 do {
+						showMessage("print 34 times");
+						i += 3;
+					} while (i < 100);
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+					int i = 220;
+					 do {
+						showMessage("print 1 times");
+						i += 3;
+					} while (i < 100);
+				</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <section><h2>OOP – Object oriented programing</h2></section>
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li>What is OOP?</li>
+                    <li>Class, object, fields, methods</li>
+                    <li>Constructor</li>
+                    <li>Encapsulation - Public, protected and private</li>
+                    <li>Encapsulation - Is-A, Has-A</li>
+                    <li>Inheritance</li>
+                    <li>Polymorphism</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h1>What is OOP?</h1>
+            <ul>
+                <li class="fragment">Programming paradigms <span class="fragment" style="color: red">religion</span>
+                </li>
+                <li class="fragment">Restrictions</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+                <h3>Class, object, fields, methods</h3>
+                <img class="fragment" width="50%" height="50%" data-src="img/table-lamp.png">
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+                    public class Lamp [ extends Object ] {
+                    }
+                </code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+					public class Lamp {
+                        private boolean on;
+
+                        public void setOn() {
+                            this.on = true;
+                        }
+
+                        public void setOff() {
+                            this.on = false;
+                        }
+
+                        public boolean isOn() {
+                            return this.on;
+                        }
+                    }
+				</code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim>
+					public class Lamp {
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    private boolean on;
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public void setOn() {
+                        this.on = true;
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public void setOff() {
+                        this.on = false;
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public boolean isOn() {
+                        return this.on;
+                    }
+				</code></pre>
+                <pre><code class="hljs" data-trim>
+                    }
+				</code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim>
+					public class Lamp {
+                    private boolean on;
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public void setPowerSwitchTo(boolean on) {
+                        this.on = on;
+                    }
+				</code></pre>
+                <pre><code class="hljs" data-trim>
+                    public boolean isOn() {
+                        return this.on;
+                    }
+                }
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Constructor</h1>
+                <pre><code class="hljs" data-trim>
+			        public class Lamp {
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public Lamp() {
+                        this.on = true;
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public Lamp(boolean on) {
+                        this.on = on;
+                    }
+				</code></pre>
+                <pre><code class="hljs" data-trim>
+                }
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Public, protected and private</h1>
+                <h4 class="fragment">Access level modifiers </h4>
+            </section>
+            <section>
+                <h3>4 in Java</h3>
+                <ul class="fragment">
+                    <li>public</li>
+                    <li>private</li>
+                    <li>protected</li>
+                    <li>package</li>
+                </ul>
+            </section>
+            <section>
+                <h3>public</h3>
+                <p class="fragment">
+                    Shop - anyone can enter
+                </p>
+            </section>
+            <section>
+                <h3>private</h3>
+                <p class="fragment">
+                    House - only selected people can enter
+                </p>
+            </section>
+            <section>
+                <h3>protected</h3>
+                <p class="fragment">
+                    Sugar at home
+                </p>
+            </section>
+            <section>
+                <h3>package</h3>
+                <p class="fragment">
+                    Monastery
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Encapsulation</h1>
+                <ul class="fragment">
+                    <li>Is-A</li>
+                    <li>Has-A</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Is-A</h1>
+                <ul>
+                    <li class="fragment">Pigeon <span style="color: red">is a</span> Bird</li>
+                    <li class="fragment">Eagle <span style="color: red">is a</span> Bird</li>
+                    <li class="fragment">Lamborghini <span style="color: red">is a</span> Car</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Has-A</h1>
+                <ul>
+                    <li class="fragment">House <span style="color: red">has a</span> Window</li>
+                    <li class="fragment">House <span style="color: red">has a</span> Roof</li>
+                    <li class="fragment">Car <span style="color: red">has an</span> Engine</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Inheritance</h1>
+                <h4 class="fragment">Class Evolution</h4>
+            </section>
+            <section>
+                <img width="50%" height="50%" data-src="img/old-house.jpg">
+                <img class="fragment" width="50%" height="50%" data-src="img/japanese-garden.jpg">
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim>
+			        public class House {
+                        private String roofColor;
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public class HouseWithGarden extends House {
+                        private Garden garden;
+
+                        public void setGreenRoof() {
+                            setRoofColor("Green");
+                        }
+                    }
+				</code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim>
+			        public class House {
+                        protected String roofColor;
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim>
+                    public class HouseWithGarden extends House {
+                        private Garden garden;
+
+                        public void setGreenRoof() {
+                            this.roofColor = "Green";
+                        }
+                    }
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Polymorphism</h1>
+                <ul>
+                    <li class="fragment">Connected with Is-A</li>
+                    <li class="fragment">Lamborghini is a Car</li>
+                </ul>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim>
+			        public class Lamborghini extends Car {
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+                    Lamborghini lamborghini1 = new Lamborghini();
+
+                    Car lamborghini2 = new Lamborghini();
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+                    Object lamborghini = new Lamborghini();
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Type casting</h1>
+                <h3 class="fragment" style="color: #17ff2e">Curiosity</h3>
+            </section>
+            <section>
+
+                <pre><code class="hljs" data-trim data-line-numbers="2-4">
+                    public class Lamborghini extends Car {
+                        public boolean isRacing() {
+                            return this.racing;
+                        }
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="2-4">
+                    public class Truck extends Car {
+                        public int getMaxCapacity() {
+                            return this.maxCapacity;
+                        }
+                    }
+				</code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+			         Car lamborghini = new Lamborghini();
+			         Car truck = new Truck();
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+                    lamborghini.isRacing();
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+                    ( ( Lamborghini ) lamborghini ).isRacing();
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+                    ( ( Truck ) truck ).getMaxCapacity();
+				</code></pre>
+            </section>
+        </section>
+
+
+        <section>
+            <section><h1>Java features</h1></section>
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li>enum</li>
+                    <li>Java Types</li>
+                    <li>Interfaces and Abstract Class</li>
+                    <li>Collections</li>
+                    <li>ForEach</li>
+                    <li>Annotations</li>
+                    <li>Streams</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>enum</h1>
+                <h5 class="fragment">special "class" that represents a group of unchangeable variables</h5>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+                    public enum Day {
+                        MONDAY, TUESDAY, WEDNESDAY,
+                        THURSDAY, FRIDAY, SATURDAY,
+                        SUNDAY
+                    }
+				</code></pre>
+                <pre class="fragment"><code class="hljs" data-trim data-line-numbers="2">
+                    public Day getMonday() {
+                        return Day.MONDAY;
+                    }
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Java Types</h1>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>byte</td>
+                        <td>java.lang.Byte</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>java.lang.Character</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>java.lang.Short</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>java.lang.Integer</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>java.lang.Long</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>java.lang.Float</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>java.lang.Double</td>
+                    </tr>
+                    <tr>
+                        <td>boolean</td>
+                        <td>java.lang.Boolean</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Interfaces and Abstract Class</h1>
+            </section>
+            <section>
+                <img width="50%" height="50%" data-src="img/new-house.jpg">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Interfaces</h1>
+                <img class="fragment" width="50%" height="50%" data-src="img/frame.jpg">
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+                    public interfaces Garden {
+                        String showAllPlants();
+                    }
+				</code></pre>
+            </section>
+            <section>
+                <h1>Abstract Class</h1>
+                <img class="fragment" width="50%" height="50%" data-src="img/construction.jpg">
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+                    public abstract class House {
+                    }
+				</code></pre>
+            </section>
+            <section>
+                <pre><code class="hljs" data-trim data-line-numbers="">
+                    public class HouseWithGarden
+                        extends House
+                        implements Garden {
+                    }
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Collections</h2>
+                <ul class="fragment" style="font-size: 0.8em">
+                    <li>List</li>
+                    <ul>
+                        <li>ArrayList</li>
+                        <li>LinkedList</li>
+                    </ul>
+                    <li>Set</li>
+                    <ul>
+                        <li>HashSet</li>
+                        <li>LinkedHashSet</li>
+                    </ul>
+                    <li>Queue</li>
+                    <ul>
+                        <li>ArrayDeque</li>
+                        <li>PriorityQueue</li>
+                    </ul>
+                    <li>Map <span style="color: red">!!!</span></li>
+                    <ul>
+                        <li>HashMap</li>
+                        <li>LinkedHashMap</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <pre><code class="hljs html" data-trim data-line-numbers="">
+                    List&lt;String&gt; arrayList = new ArrayList&lt;&gt;();
+
+                    Set&lt;Integer&gt; someIntegerSet = new HashSet&lt;&gt;();
+
+                    Queue&lt;UUID&gt; someIds = new ArrayDeque&lt;&gt;();
+
+                    Map&lt;String, UUID&gt; keyValue = new HashMap&lt;&gt;();
+				</code></pre>
+            </section>
+        </section>
+        <section>
+            <h1>ForEach</h1>
+            <pre class="fragment"><code class="hljs" data-trim data-line-numbers="">
+                 List&lt;Cookie&gt; oreo = new ArrayList&lt;&gt;();
+
+                for (Cookie cookie: oreo) {
+                    eat(cookie);
+                }
+            </code></pre>
+        </section>
+        <section>
+            <h1>Annotations</h1>
+            <pre class="fragment"><code class="hljs" data-trim data-line-numbers="6">
+                public interfaces Garden {
+                    String showAllPlants();
+                }
+
+                public class HouseWithGarden implements Garden {
+                    @Override
+                    public String showAllPlants() {
+                        someCode();
+                    }
+                }
+            </code></pre>
+        </section>
+        <section>
+            <h1>Streams</h1>
+            <pre class="fragment"><code class="hljs" data-trim data-line-numbers="6">
+                List&lt;Cookie&gt; oreo = new ArrayList&lt;&gt;();
+
+               oreo.stream()
+                .filter(it -> it.hasFilling())
+                .forEach(it -> it.eat());
+            </code></pre>
+        </section>
+
+        <section>
+            <h1>Thanks</h1>
+            <h1>Q&A</h1>
+        </section>
+
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+    });
+</script>
+</body>
+</html>
